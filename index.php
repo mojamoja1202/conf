@@ -17,8 +17,19 @@ include "../../header.php";
 function checkUser(){
 	global $xoopsUser;
 	$g=$xoopsUser->groups();
-	$g=implode($g,",");
-	return $g;
+	if(in_array("1", $g)){
+		redirect_header("admin_index.php",3,"歡迎管理人員登入");
+	}
+	if(in_array("6", $g)){
+		redirect_header("admin_index.php",3,"歡迎管理人員登入");
+	}
+	if(in_array("7", $g)){
+		redirect_header("reviewer_index.php",3,"歡迎審核人員登入");
+	}
+	if(in_array("2", $g)){
+		redirect_header("register_index.php",3,"歡迎報名人員登入");
+	}
+	//這邊要顯示訪客的內容，可以選擇各年度投稿資料及優選文章
 }
 
 //-----判斷區-----
