@@ -11,9 +11,20 @@ include "../../mainfile.php";
 include "../../header.php";
 //include_once XOOPS_ROOT_PATH . "/modules/tadtools/tad_function.php";
 //-----函數區-----
-//顯示管理員頁面
+//顯示管理員進入後的第一個頁面
+//顯示目前投稿的數量
 function show(){
-	$main="這是管理員的頁面";
+	$main="這是管理人員的頁面<br><br>";
+	$main.="<a href='admin_index.php'>主選單</a> | <a href='admin_index.php?op=process'>時程</a> | <a href='admin_index.php?op=abstract'>所有稿件</a> | <a href='admin_index.php?op=content'>全文</a><br><br>";
+	return $main;
+}
+//顯示流程頁面
+function process(){
+	$main="<table border='1'>";
+	$main.="<tr align='center'>";
+	$main.="<td>項目</td><td>開始時間</td><td>結束時間</td><td>管理</td>";
+	$main.="</tr>";
+	$main.="</table>";
 	return $main;
 }
 
@@ -24,11 +35,24 @@ function show(){
 $op=(empty($_REQUEST['op']))?"":$_REQUEST['op'];
 $sn=(empty($_REQUEST['sn']))?"":$_REQUEST['sn'];
 switch ($op) {
-	case 'save':
+	case 'process':
+		$main=show();
+		$main.=process();
+		break;
+	
+
+	case 'abstract':
 		save();
 		redirect_header("index.php",3,"領取成功");
 		break;
-	
+
+
+	case 'content':
+		save();
+		redirect_header("index.php",3,"領取成功");
+		break;
+
+
 	default:
 		$main=show();
 }
