@@ -46,7 +46,7 @@ function process(){
 function paper(){
 	$main="<table border='1'>";
 	$main.="<tr align='center'>";
-	$main.="<td width='100'>指導老師</td><td>學生</td><td>標題</td><td>類型</td><td width='100'>審核狀態</td><td>管理</td>";
+	$main.="<td width='150'>指導老師</td><td>學生</td><td>標題</td><td>類型</td><td width='100'>審核狀態</td><td>管理</td>";
 	$main.="</tr>";
 	$main.="</table><br>";
 	return $main;
