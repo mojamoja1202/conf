@@ -28,54 +28,6 @@ $modversion['system_menu'] = 1;
 
 //---資料表架構---//
 $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
-$modversion['tables'][]         = "submission_reginfo";
-$modversion['tables'][]         = "submission_paperinfo";
-$modversion['tables'][]         = "kw_club_place";
-$modversion['tables'][]         = "kw_club_teacher";
-$modversion['tables'][]         = "kw_club_class";
-$modversion['tables'][]         = "kw_club_reg";
-$modversion['tables'][]         = "kw_club_files_center";
-
-//---管理介面設定---//
-$modversion['hasAdmin']   = 1;
-$modversion['adminindex'] = "admin/index.php";
-$modversion['adminmenu']  = "admin/menu.php";
-
-//---前台主選單設定---//
-$modversion['hasMain'] = 1;
-$i                     = 0;
-$i++;
-$modversion['sub'][$i]['name'] = _MI_KWCLUB_SMNAME2;
-$modversion['sub'][$i]['url']  = "index.php?op=teacher";
-$i++;
-$modversion['sub'][$i]['name'] = _MI_KWCLUB_SMNAME3;
-$modversion['sub'][$i]['url']  = "index.php?op=myclass";
-// $i++;
-// $modversion['sub'][$i]['name'] = _MI_KWCLUB_SMNAME4;
-// $modversion['sub'][$i]['url']  = "index.php?op=statistic";
-
-//---樣板設定---//
-$modversion['templates']                    = array();
-$i                                          = 1;
-$modversion['templates'][$i]['file']        = 'kw_club_config.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_config.tpl';
-
-$i++;
-$modversion['templates'][$i]['file']        = 'kw_club_register.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_register.tpl';
-
-$i++;
-$modversion['templates'][$i]['file']        = 'kw_club_index.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_index.tpl';
-
-$i++;
-$modversion['templates'][$i]['file']        = 'kw_club_club.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_club.tpl';
-
-$i++;
-$modversion['templates'][$i]['file']        = 'kw_club_cate.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_cate.tpl';
-
-$i++;
-$modversion['templates'][$i]['file']        = 'kw_club_adm_main.tpl';
-$modversion['templates'][$i]['description'] = 'kw_club_adm_main.tpl';
+$modversion['tables'][]         = "conf_assigner";
+$modversion['tables'][]         = "conf_paper";
+$modversion['tables'][]         = "conf_flow";
